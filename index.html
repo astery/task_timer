@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="helpers.js"></script>
+    <script src="timer.js"></script>
+    <link type="text/css" rel="stylesheet" media="all" href="bootstrap.css" />
+    <style>
+      .task_list {
+        width: 1000px;
+        margin: auto auto;
+      }
+      .task_input {
+        margin: auto auto;
+        width: 1000px;
+        text-align: center;
+      }
+      #task_name {
+        margin: 20px auto; 
+        width: 500px;
+      }
+      #proto {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="timer">
+      <table class="task_list table table-striped">
+        <thead>
+        <tr>
+          <td class="start_timestamp">
+            timestamp
+          </td>
+          <td class="task_name">
+            task name
+          </td>
+          <td class="elapsed_time">
+            elapsed time
+          </td>
+          <td class="start_stop">
+          </td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr id="proto" class="task_row">
+          <td class="start_timestamp">
+          </td>
+          <td class="task_name">
+            
+          </td>
+          <td class="elapsed_time">
+          </td>
+          <td class="start_stop">
+          </td>
+        </tr>
+        <tbody>
+      </table>
+
+      <div class="task_input">
+        <input id="task_name" />
+        <div class="elapsed_time">
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>
