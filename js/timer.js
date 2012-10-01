@@ -329,10 +329,13 @@
     this.mark_border = function(date){
       time_marks.push(date || new Date());
       render();
-      if (!is_border_closed())
+      if (!is_border_closed()) {
         timer = setInterval(function(){render()}, 100);
-      else 
+        console.log('timer is set');
+      } else {
         clearInterval(timer);
+        console.log('timer is clear');
+      }
     }
 
     var get_elapsed_time = function(){
@@ -395,7 +398,7 @@
   window.TimerApp = function (elem_id) {
     var timer_elem = document.getElementById(elem_id);
     var memo = JSON.parse( localStorage.getItem('TimerApp_TaskList') );
-    console.log(memo);
+    console.log(JSON.parse(memo));
 
     timer = new TaskList(timer_elem);
     timer.setMemoriz(memo);

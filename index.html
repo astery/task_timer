@@ -1,13 +1,24 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script src="helpers.js"></script>
-    <script src="timer.js"></script>
-    <link type="text/css" rel="stylesheet" media="all" href="bootstrap.css" />
+    <script src="/js/helpers.js"></script>
+    <script src="/js/timer.js"></script>
+    <link type="text/css" rel="stylesheet" media="all" href="/css/bootstrap.css" />
     <style>
+      body {
+        background: url(/images/lghtmesh.png) repeat;
+      }
+      #timer {
+        margin-top: 40px;
+      }
       .task_list {
         width: 1000px;
         margin: auto auto;
+      }
+      .task_list input[type=submit] {
+        border: 1px solid #ddd;
+        border-radius: 3px;
+        background-color: rgba(227, 250, 172, 0.2);
       }
       .task_input {
         margin: auto auto;
@@ -15,11 +26,27 @@
         text-align: center;
       }
       #task_name {
-        margin: 20px auto; 
-        width: 500px;
+        margin: 20px auto;
+        width: 482px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        padding: 3px 23px;
       }
       #proto {
         display: none;
+      }
+      .table-striped tbody tr:nth-child(2n+1) td, 
+      .table-striped tbody tr:nth-child(2n+1) th {
+        background-color: inherit;
+      }
+      .table th, 
+      .table td {
+        background-color: inherit;
+        border-top: 1px solid rgba(150,150,150, 0.10);
+      }
+      .table tbody tr:hover th, 
+      .table tbody tr:hover td {
+        background-color: rgba(227, 250, 172, 0.2);
       }
     </style>
   </head>
