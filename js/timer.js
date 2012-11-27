@@ -98,9 +98,15 @@
     var e_taskinput_onkeydown = (function (e) {
       if (e.keyCode == 13) {
         var name = e.currentTarget.value;
-        this.stopAllTasks();
-        this.addTask(name);
-        localStorage.setItem( 'TimerApp_TaskList', JSON.stringify(timer.getMemoriz()) );
+	if (name == 'clear all') {
+	  localStorage.setItem( 'TimerApp_TaskList', '');
+	  this.task_list = [];
+	  this.render();
+	} else {
+          this.stopAllTasks();
+          this.addTask(name);
+          localStorage.setItem( 'TimerApp_TaskList', JSON.stringify(timer.getMemoriz()) );
+	}
       }
     }).bind(this);
 
